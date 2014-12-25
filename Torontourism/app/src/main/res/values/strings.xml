@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Torontourism</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="eventlabel">"Event : "</string>
+    <string name="arealabel">"Area : "</string>
+    <string name="categorylabel">"Category : "</string>
+    <string name="presentedlabel">"Presented By: "</string>
+    <string name="startdatelabel">"Start Date: "</string>
+    <string name="starttimelabel">"Start Time: "</string>
+    <string name="enddatelabel">"End Date: "</string>
+
+
+</resources>
