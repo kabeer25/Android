@@ -12,9 +12,11 @@ import android.widget.TextView;
 public class SingleItemView extends Activity {
     String Event;
     String Area;
-    String Presented;
+    String Location;
     String Category;
     String Image;
+    String Admission;
+    String Phone;
     ImageLoader imageLoader = new ImageLoader(this);
 
     @Override
@@ -29,17 +31,26 @@ public class SingleItemView extends Activity {
         Event = intent.getStringExtra("Event");
         Area = intent.getStringExtra("Area");
         Category = intent.getStringExtra("Category");
+        Location = intent.getStringExtra("Location");
+        Admission = intent.getStringExtra("Admission");
+        Phone = intent.getStringExtra("Phone");
         Image = intent.getStringExtra("Image");
 
         TextView textView = (TextView) findViewById(R.id.Event);
         TextView textView1 = (TextView) findViewById(R.id.Area);
         TextView textView3 = (TextView) findViewById(R.id.Category);
+        TextView textView2 = (TextView) findViewById(R.id.Location);
+        TextView textView4 = (TextView) findViewById(R.id.Admission);
+        TextView textView5 = (TextView) findViewById(R.id.Phone);
 
         ImageView imageView = (ImageView) findViewById(R.id.Image);
 
         textView.setText(Event);
         textView1.setText(Area);
         textView3.setText(Category);
+        textView2.setText(Location);
+        textView4.setText(Admission);
+        textView5.setText(Phone);
 
         imageLoader.DisplayImage(Image, imageView);
     }

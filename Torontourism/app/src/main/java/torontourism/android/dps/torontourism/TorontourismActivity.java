@@ -29,6 +29,9 @@ public class TorontourismActivity extends Activity{
     static String Area = "Area-text";//and this they were both mapping to the same thing in the hashmap
     static String Category = "CategoryList-text";
     static String Image = "Image";
+    static String Location = "Location-text";
+    static String Admission = "Admission-text";
+    static String Phone = "Phone-text";
 
 
     @Override
@@ -72,6 +75,9 @@ public class TorontourismActivity extends Activity{
                     map.put(Event,parser.getValue(element,"EventName"));
                     map.put(Area, parser.getValue(element, "Area"));
                     map.put(Category, parser.getValue(element, "CategoryList"));
+                    map.put(Location,parser.getValue(element,"Location"));
+                    map.put(Admission, parser.getValue(element,"Admission"));
+                    map.put(Phone,parser.getValue(element,"OrgContactPhone"));
 
                     map.put(Image, parser.getValue(element, Image));
 

@@ -21,7 +21,7 @@ public class MemoryCache {
             Bitmap>(10,1.5f,true));
 
     private long size =0;
-    private long limit = 1000000;
+    private long limit = 10000000;
 
     public MemoryCache(){
         SetLimit(Runtime.getRuntime().maxMemory()/4);
