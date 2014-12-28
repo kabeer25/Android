@@ -11,6 +11,7 @@
     <string name="startdatelabel">"Start Date: "</string>
     <string name="starttimelabel">"Start Time: "</string>
     <string name="enddatelabel">"End Date: "</string>
+    <string name="image">Image</string>
 
 
 </resources>

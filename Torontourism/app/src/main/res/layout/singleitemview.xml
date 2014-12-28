@@ -49,8 +49,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:background="#000000"
-        android:padding="1dp"/>
+        android:layout_alignParentEnd="true"
+        android:contentDescription="@string/image"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/categorylabel" />
 
 
 
