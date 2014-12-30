@@ -18,10 +18,10 @@ public class MemoryCache {
     public static final String MemCache = "MemoryCache";
 
     private Map<String,Bitmap> cache = Collections.synchronizedMap(new LinkedHashMap<String,
-            Bitmap>(10,1.5f,true));
+            Bitmap>(100,1.9f,true));
 
     private long size =0;
-    private long limit = 10000000;
+    private long limit = 90000000;
 
     public MemoryCache(){
         SetLimit(Runtime.getRuntime().maxMemory()/4);
@@ -30,7 +30,7 @@ public class MemoryCache {
     public void SetLimit(long newLimit)
     {
         limit = newLimit;
-        Log.i(MemCache, "MemoryCache will be up to " + limit / 1024 / 2014 + "MB");
+        Log.i(MemCache, "MemoryCache will be up to " + limit / 1024 / 1014 + "MB");
     }
 
     public Bitmap get(String stringid)

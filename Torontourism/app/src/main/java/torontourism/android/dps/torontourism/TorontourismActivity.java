@@ -25,8 +25,8 @@ public class TorontourismActivity extends Activity{
     ListViewAdapter adapter;
     ProgressDialog progressDialog;
     ArrayList<HashMap<String,String>> arrayList;
-    static String Event = "Event-text";//changed this
-    static String Area = "Area-text";//and this they were both mapping to the same thing in the hashmap
+    static String Event = "Event-text";
+    static String Area = "Area-text";
     static String Category = "CategoryList-text";
     static String Image = "Image";
     static String Location = "Location-text";
@@ -73,10 +73,9 @@ public class TorontourismActivity extends Activity{
 
 
                     map.put(Event,parser.getValue(element,"EventName"));
-                    map.put(Area, parser.getValue(element, "Area"));
+                    map.put(Area, parser.getValue(element,"Area"));
                     map.put(Category, parser.getValue(element, "CategoryList"));
                     map.put(Location,parser.getValue(element,"Location"));
-                    map.put(Admission, parser.getValue(element,"Admission"));
                     map.put(Phone,parser.getValue(element,"OrgContactPhone"));
 
                     map.put(Image, parser.getValue(element, Image));

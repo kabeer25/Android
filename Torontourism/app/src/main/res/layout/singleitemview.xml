@@ -14,36 +14,22 @@
         android:text="@string/eventlabel"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/eventlabel"
-        android:layout_above="@+id/Area"
         android:layout_alignRight="@+id/Event" />
-    <TextView
-        android:id="@+id/arealabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/eventlabel"
-        android:text="@string/arealabel"/>
-    <TextView
-        android:id="@+id/Area"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/arealabel"
-        android:layout_above="@+id/categorylabel"
-        android:layout_toRightOf="@+id/categorylabel"
-        android:layout_toEndOf="@+id/categorylabel" />
+
     <TextView
         android:id="@+id/categorylabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/arealabel"
+        android:layout_below="@+id/Event"
         android:text="@string/categorylabel"/>
     <TextView
         android:id="@+id/Category"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/categorylabel"
-        android:layout_below="@+id/Area"
-        android:layout_toRightOf="@+id/categorylabel"
-        android:layout_toEndOf="@+id/categorylabel" />
+        android:layout_toEndOf="@+id/categorylabel"
+        android:layout_below="@+id/Event"
+        android:layout_toRightOf="@+id/categorylabel" />
     <TextView
         android:id="@+id/locationlabel"
         android:layout_width="wrap_content"
@@ -60,24 +46,10 @@
         android:layout_toRightOf="@+id/locationlabel"/>
 
     <TextView
-        android:id="@+id/admissionlabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Location"
-        android:text="@string/admissionlabel"/>
-    <TextView
-        android:id="@+id/Admission"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/admissionlabel"
-        android:layout_toEndOf="@+id/admissionlabel"
-        android:layout_below="@+id/Location"
-        android:layout_toRightOf="@id/admissionlabel"/>
-    <TextView
         android:id="@+id/phonelabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Admission"
+        android:layout_below="@+id/Location"
         android:text="@string/phonelabel"/>
     <TextView
         android:id="@+id/Phone"
@@ -85,10 +57,8 @@
         android:layout_height="wrap_content"
         android:text="@string/phonelabel"
         android:layout_toEndOf="@+id/phonelabel"
-        android:layout_below="@+id/Admission"
+        android:layout_below="@+id/Location"
         android:layout_toRightOf="@+id/phonelabel"/>
-
-
 
     <ImageView
         android:id="@+id/Image"
@@ -100,7 +70,4 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/phonelabel" />
-
-
-
 </RelativeLayout>

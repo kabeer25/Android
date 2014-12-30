@@ -79,25 +79,6 @@ public class TorontourismParser {
         return document;
     }
 
-    public final String getElements(Node node)
-    {
-        Node element;
-        if(node != null)
-        {
-            if(node.hasChildNodes())
-            {
-                for(element = node.getFirstChild(); element != null;
-                    element = element.getNextSibling())
-                {
-                    if (element.getNodeType() == Node.TEXT_NODE)
-                    {
-                        return element.getNodeValue();
-                    }
-                }
-            }
-        }
-        return "";
-    }
 
     /**
      * creates a list of entrydata atributes, then takes the name value of the Entry Data

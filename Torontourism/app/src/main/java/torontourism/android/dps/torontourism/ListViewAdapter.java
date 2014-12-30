@@ -57,7 +57,6 @@ public class ListViewAdapter extends BaseAdapter {
         TextView Area;
         TextView Category;
         TextView Location;
-        TextView Admission;
         TextView Phone;
         ImageView Image;
 
@@ -67,20 +66,17 @@ public class ListViewAdapter extends BaseAdapter {
         hashMap = xmldata.get(position);
 
         Event = (TextView) view.findViewById(R.id.Event);
-        Area = (TextView) view.findViewById(R.id.Area);
+       // Area = (TextView) view.findViewById(R.id.Area);
         Category = (TextView) view.findViewById(R.id.Category);
         Location = (TextView) view.findViewById(R.id.Location);
-        Admission = (TextView) view.findViewById(R.id.Admission);
         Phone = (TextView) view.findViewById(R.id.Phone);
 
         Image = (ImageView) view.findViewById(R.id.Image);
 
         Event.setText(hashMap.get(TorontourismActivity.Event));
-        Area.setText(hashMap.get(TorontourismActivity.Area));
         Category.setText(hashMap.get(TorontourismActivity.Category));
         Location.setText(hashMap.get(TorontourismActivity.Location));
-        Admission.setText(hashMap.get(TorontourismActivity.Admission));
-        Phone.setText(hashMap.get(TorontourismActivity.Phone));
+        //Phone.setText(hashMap.get(TorontourismActivity.Phone));
 
 
         imageLoader.DisplayImage(hashMap.get(TorontourismActivity.Image),Image);
@@ -94,10 +90,9 @@ public class ListViewAdapter extends BaseAdapter {
                 Intent intent = new Intent(context,SingleItemView.class);
 
                 intent.putExtra("Event", hashMap.get(TorontourismActivity.Event));
-                intent.putExtra("Area", hashMap.get(TorontourismActivity.Area));
+               // intent.putExtra("Area", hashMap.get(TorontourismActivity.Area));
                 intent.putExtra("Category", hashMap.get(TorontourismActivity.Category));
                 intent.putExtra("Location", hashMap.get(TorontourismActivity.Location));
-                intent.putExtra("Admission", hashMap.get(TorontourismActivity.Admission));
                 intent.putExtra("Phone", hashMap.get(TorontourismActivity.Phone));
                 intent.putExtra("Image", hashMap.get(TorontourismActivity.Image));
 
