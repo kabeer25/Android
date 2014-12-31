@@ -30,7 +30,6 @@ public class TorontourismActivity extends Activity{
     static String Category = "CategoryList-text";
     static String Image = "Image";
     static String Location = "Location-text";
-    static String Admission = "Admission-text";
     static String Phone = "Phone-text";
 
 
@@ -77,8 +76,7 @@ public class TorontourismActivity extends Activity{
                     map.put(Category, parser.getValue(element, "CategoryList"));
                     map.put(Location,parser.getValue(element,"Location"));
                     map.put(Phone,parser.getValue(element,"OrgContactPhone"));
-
-                    map.put(Image, parser.getValue(element, Image));
+                    map.put(Image, parser.getValue(element, "Image"));
 
                     arrayList.add(map);
                 }

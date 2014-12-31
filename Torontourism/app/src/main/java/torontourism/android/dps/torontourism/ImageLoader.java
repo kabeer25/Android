@@ -16,20 +16,15 @@ package torontourism.android.dps.torontourism;
     import java.io.InputStream;
     import java.io.OutputStream;
     import java.net.HttpURLConnection;
-    import java.net.MalformedURLException;
     import java.net.URL;
-    import java.net.URLConnection;
-    import java.util.Collection;
     import java.util.Collections;
     import java.util.Map;
     import java.util.WeakHashMap;
-    import java.util.concurrent.Executor;
     import java.util.concurrent.ExecutorService;
     import java.util.concurrent.Executors;
     import android.os.Handler;
-    import java.util.logging.LogRecord;
 
-    /**
+/**
      * Created by Kabeer on 11/11/2014.
      */
     public class ImageLoader {
@@ -47,8 +42,6 @@ package torontourism.android.dps.torontourism;
             executorService = Executors.newFixedThreadPool(5);
         }
 
-        //final int NoImage_Id = R.drawable.temp_img;
-
         public void DisplayImage(String url, ImageView imageView) {
             imageViewStringMap.put(imageView, url);
             Bitmap bitmap = memoryCache.get(url);
@@ -56,8 +49,7 @@ package torontourism.android.dps.torontourism;
                 imageView.setImageBitmap(bitmap);
             } else {
                 queuePhoto(url, imageView);
-                //imageView.setImageDrawable(getResources().getDrawable());
-                // imageView.setImageResource(R.drawable.temp_img);
+                imageView.setImageResource(R.drawable.not_available);
             }
         }
 

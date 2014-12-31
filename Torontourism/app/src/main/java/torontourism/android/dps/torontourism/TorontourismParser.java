@@ -101,9 +101,12 @@ public class TorontourismParser {
 
                 NodeList textNodes = elementEntry.getElementsByTagName("text");
                 Node textNode = textNodes.item(0);
-                returnValue = textNode.getFirstChild().getTextContent();
-
-                return returnValue;
+                Node node = textNode.getFirstChild();
+                if(node != null)
+                {
+                    returnValue = node.getNodeValue();
+                }else
+                   returnValue = "Not Available ";
             }
         }
 
