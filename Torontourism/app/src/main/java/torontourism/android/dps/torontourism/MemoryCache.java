@@ -24,13 +24,13 @@ public class MemoryCache {
     private long limit = 90000000;
 
     public MemoryCache(){
-        SetLimit(Runtime.getRuntime().maxMemory()/4);
+        SetLimit(Runtime.getRuntime().maxMemory()/2);
     }
 
     public void SetLimit(long newLimit)
     {
         limit = newLimit;
-        Log.i(MemCache, "MemoryCache will be up to " + limit / 1024 / 1014 + "MB");
+        Log.i(MemCache, "MemoryCache will be up to " + limit  + "MB");
     }
 
     public Bitmap get(String stringid)

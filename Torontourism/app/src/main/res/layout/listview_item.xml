@@ -6,6 +6,7 @@
         android:id="@+id/eventlabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:text="@string/eventlabel" />
     <TextView
         android:id="@+id/Event"
@@ -20,6 +21,7 @@
         android:id="@+id/categorylabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:layout_below="@+id/Event"
         android:text="@string/categorylabel"/>
     <TextView
@@ -34,6 +36,7 @@
         android:id="@+id/locationlabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:layout_below="@+id/Category"
         android:text="@string/locationlabel"/>
     <TextView
@@ -46,13 +49,24 @@
         android:layout_toRightOf="@+id/locationlabel"/>
 
     <ImageView
-        android:id="@+id/Image"
+        android:id="@+id/imageView"
+        android:contentDescription="RightArrow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_toRightOf="@+id/locationlabel"
-        android:layout_toEndOf="@+id/Phone"
-        android:layout_below="@+id/locationlabel" />
+        android:layout_centerVertical="true"
+        android:src="@drawable/rightarrow"/>
+
+    <ImageView
+        android:id="@+id/Image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/Location"
+        android:layout_alignEnd="@id/Location"
+        android:layout_below="@id/Location"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:contentDescription="ParsedImage" />
 
 
 </RelativeLayout>

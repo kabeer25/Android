@@ -1,5 +1,9 @@
 package torontourism.android.dps.torontourism;
 
+/**
+ * Created by Kabeer on 12/24/2014.
+ */
+
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
@@ -26,11 +30,11 @@ public class TorontourismActivity extends Activity{
     ProgressDialog progressDialog;
     ArrayList<HashMap<String,String>> arrayList;
     static String Event = "Event-text";
-    static String Area = "Area-text";
     static String Category = "CategoryList-text";
     static String Image = "Image";
     static String Location = "Location-text";
     static String Phone = "Phone-text";
+    static String EventURl = "EventURL-text";
 
 
     @Override
@@ -72,10 +76,10 @@ public class TorontourismActivity extends Activity{
 
 
                     map.put(Event,parser.getValue(element,"EventName"));
-                    map.put(Area, parser.getValue(element,"Area"));
                     map.put(Category, parser.getValue(element, "CategoryList"));
                     map.put(Location,parser.getValue(element,"Location"));
                     map.put(Phone,parser.getValue(element,"OrgContactPhone"));
+                    map.put(EventURl, parser.getValue(element, "EventURL"));
                     map.put(Image, parser.getValue(element, "Image"));
 
                     arrayList.add(map);

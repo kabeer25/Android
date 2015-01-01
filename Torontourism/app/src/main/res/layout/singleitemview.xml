@@ -6,6 +6,7 @@
         android:id="@+id/eventlabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:text="@string/eventlabel" />
     <TextView
         android:id="@+id/Event"
@@ -20,6 +21,7 @@
         android:id="@+id/categorylabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:layout_below="@+id/Event"
         android:text="@string/categorylabel"/>
     <TextView
@@ -34,6 +36,7 @@
         android:id="@+id/locationlabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:layout_below="@+id/categorylabel"
         android:text="@string/locationlabel"/>
     <TextView
@@ -49,16 +52,37 @@
         android:id="@+id/phonelabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:layout_below="@+id/Location"
         android:text="@string/phonelabel"/>
     <TextView
         android:id="@+id/Phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:clickable="true"
+        android:autoLink="phone"
         android:text="@string/phonelabel"
         android:layout_toEndOf="@+id/phonelabel"
         android:layout_below="@+id/Location"
         android:layout_toRightOf="@+id/phonelabel"/>
+
+    <TextView
+        android:id="@+id/eventURLlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_below="@+id/phonelabel"
+        android:text="@string/eventURLlabel"/>
+    <TextView
+        android:id="@+id/EventURL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:autoLink="web"
+        android:text="@string/eventURLlabel"
+        android:layout_toEndOf="@+id/eventURLlabel"
+        android:layout_below="@+id/Phone"
+        android:layout_toRightOf="@+id/eventURLlabel"/>
 
     <ImageView
         android:id="@+id/Image"
@@ -69,5 +93,5 @@
         android:contentDescription="@string/image"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/phonelabel" />
+        android:layout_below="@+id/EventURL" />
 </RelativeLayout>

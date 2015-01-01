@@ -25,9 +25,6 @@ import java.io.StringReader;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
-/**
- * Created by Kabeer on 11/6/2014.
- */
 public class TorontourismParser {
 
     static final String FesEventURL = "http://wx.toronto.ca/festevents.nsf/tpaview?readviewentries";

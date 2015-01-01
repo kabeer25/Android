@@ -58,6 +58,7 @@ public class ListViewAdapter extends BaseAdapter {
         TextView Category;
         TextView Location;
         TextView Phone;
+        TextView EventURL;
         ImageView Image;
 
         layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -70,6 +71,7 @@ public class ListViewAdapter extends BaseAdapter {
         Category = (TextView) view.findViewById(R.id.Category);
         Location = (TextView) view.findViewById(R.id.Location);
         Phone = (TextView) view.findViewById(R.id.Phone);
+        EventURL = (TextView) view.findViewById(R.id.EventURL);
 
         Image = (ImageView) view.findViewById(R.id.Image);
 
@@ -94,6 +96,7 @@ public class ListViewAdapter extends BaseAdapter {
                 intent.putExtra("Category", hashMap.get(TorontourismActivity.Category));
                 intent.putExtra("Location", hashMap.get(TorontourismActivity.Location));
                 intent.putExtra("Phone", hashMap.get(TorontourismActivity.Phone));
+                intent.putExtra("EventURL", hashMap.get(TorontourismActivity.EventURl));
                 intent.putExtra("Image", hashMap.get(TorontourismActivity.Image));
 
                 context.startActivity(intent);

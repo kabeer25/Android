@@ -24,9 +24,6 @@ package torontourism.android.dps.torontourism;
     import java.util.concurrent.Executors;
     import android.os.Handler;
 
-/**
-     * Created by Kabeer on 11/11/2014.
-     */
     public class ImageLoader {
 
         MemoryCache memoryCache = new MemoryCache();
@@ -70,16 +67,16 @@ package torontourism.android.dps.torontourism;
                 Bitmap bitmap1 = null;
                 URL imageurl = new URL(url);
                 HttpURLConnection connection = (HttpURLConnection) imageurl.openConnection();
-                connection.setConnectTimeout(900000);
-                connection.setReadTimeout(900000);
+                connection.setConnectTimeout(9000000);
+                connection.setReadTimeout(9000000);
                 connection.setInstanceFollowRedirects(true);
                 InputStream inputStream = connection.getInputStream();
                 OutputStream outputStream = new FileOutputStream(file);
                 Utils.CopyStream(inputStream, outputStream);
                 outputStream.close();
                 connection.disconnect();
-                bitmap = decodeFile(file);
-                return bitmap;
+                bitmap1 = decodeFile(file);
+                return bitmap1;
 
             } catch (Throwable ex) {
                 if (ex instanceof OutOfMemoryError)
@@ -99,7 +96,7 @@ package torontourism.android.dps.torontourism;
 
                 final int Size = 1000;
                 int width_temp = options.outWidth, height_temp = options.outHeight;
-                int scale = 1;
+                int scale = 2;
                 while (true) {
                     if (width_temp / 2 < Size || height_temp / 2 < Size)
                         break;
@@ -184,9 +181,8 @@ package torontourism.android.dps.torontourism;
                 if(bitmap != null){
                     photoToLoad.imageView.setImageBitmap(bitmap);
                 }else{
-                    //photoToLoad.imageView.setImageResource(NoImage_Id);
+                    photoToLoad.imageView.setImageResource(R.drawable.not_available);
                 }
-
             }
         }
 
