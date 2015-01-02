@@ -47,13 +47,28 @@
         android:layout_toEndOf="@+id/locationlabel"
         android:layout_below="@+id/Category"
         android:layout_toRightOf="@+id/locationlabel"/>
+    <TextView
+        android:id="@+id/admissionlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/admissionlabel"
+        android:layout_below="@+id/locationlabel"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/Admission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/admissionlabel"
+        android:layout_below="@+id/Location"
+        android:layout_toEndOf="@+id/admissionlabel"
+        android:layout_toRightOf="@id/admissionlabel"/>
 
     <TextView
         android:id="@+id/phonelabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:layout_below="@+id/Location"
+        android:layout_below="@+id/Admission"
         android:text="@string/phonelabel"/>
     <TextView
         android:id="@+id/Phone"
@@ -63,7 +78,7 @@
         android:autoLink="phone"
         android:text="@string/phonelabel"
         android:layout_toEndOf="@+id/phonelabel"
-        android:layout_below="@+id/Location"
+        android:layout_below="@+id/Admission"
         android:layout_toRightOf="@+id/phonelabel"/>
 
     <TextView
@@ -111,4 +126,12 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/MapURL" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add to Calender"
+        android:id="@+id/button"
+        android:layout_below="@+id/Image"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

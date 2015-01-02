@@ -4,10 +4,12 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.CalendarContract;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.webkit.WebView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -24,6 +26,7 @@ public class SingleItemView extends Activity {
     String Phone;
     String EventURL;
     String MapURL;
+    String Admission;
     ImageLoader imageLoader = new ImageLoader(this);
 
     @Override
@@ -42,6 +45,7 @@ public class SingleItemView extends Activity {
         EventURL = intent.getStringExtra("EventURL");
         MapURL = intent.getStringExtra("MapURL");
         Image = intent.getStringExtra("Image");
+        Admission = intent.getStringExtra("Admission");
 
         MapURL = MapURL.replace("[","");
         MapURL = MapURL.replace("]","");
@@ -52,6 +56,8 @@ public class SingleItemView extends Activity {
         TextView textView5 = (TextView) findViewById(R.id.Phone);
         TextView textView1 = (TextView) findViewById(R.id.EventURL);
         TextView textView4 = (TextView) findViewById(R.id.MapURL);
+        TextView textView6 = (TextView) findViewById(R.id.Admission);
+        Button button = (Button) findViewById(R.id.button);
 
         ImageView imageView = (ImageView) findViewById(R.id.Image);
 
@@ -62,6 +68,7 @@ public class SingleItemView extends Activity {
         textView1.setText(EventURL);
         textView4.setText(Html.fromHtml(MapURL));
         textView4.setMovementMethod(LinkMovementMethod.getInstance());
+        textView6.setText(Admission);
 
         textView1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,5 +89,18 @@ public class SingleItemView extends Activity {
 
 
         imageLoader.DisplayImage(Image, imageView);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent2 = new Intent(Intent.ACTION_INSERT);
+                intent2.setType("vnd.android.cursor.item/event");
+                intent2.putExtra(CalendarContract.Events.TITLE, Event);
+                intent2.putExtra(CalendarContract.Events.EVENT_LOCATION,Location);
+                startActivity(intent2);
+            }
+        });
+
+
     }
 }

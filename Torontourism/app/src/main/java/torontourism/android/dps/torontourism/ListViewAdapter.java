@@ -68,19 +68,15 @@ public class ListViewAdapter extends BaseAdapter {
         hashMap = xmldata.get(position);
 
         Event = (TextView) view.findViewById(R.id.Event);
-       // Area = (TextView) view.findViewById(R.id.Area);
         Category = (TextView) view.findViewById(R.id.Category);
         Location = (TextView) view.findViewById(R.id.Location);
-        Phone = (TextView) view.findViewById(R.id.Phone);
-        EventURL = (TextView) view.findViewById(R.id.EventURL);
-        MapURL = (TextView) view.findViewById(R.id.MapURL);
+
 
         Image = (ImageView) view.findViewById(R.id.Image);
 
         Event.setText(hashMap.get(TorontourismActivity.Event));
         Category.setText(hashMap.get(TorontourismActivity.Category));
         Location.setText(hashMap.get(TorontourismActivity.Location));
-        //Phone.setText(hashMap.get(TorontourismActivity.Phone));
 
 
         imageLoader.DisplayImage(hashMap.get(TorontourismActivity.Image),Image);
@@ -94,13 +90,13 @@ public class ListViewAdapter extends BaseAdapter {
                 Intent intent = new Intent(context,SingleItemView.class);
 
                 intent.putExtra("Event", hashMap.get(TorontourismActivity.Event));
-               // intent.putExtra("Area", hashMap.get(TorontourismActivity.Area));
                 intent.putExtra("Category", hashMap.get(TorontourismActivity.Category));
                 intent.putExtra("Location", hashMap.get(TorontourismActivity.Location));
                 intent.putExtra("Phone", hashMap.get(TorontourismActivity.Phone));
                 intent.putExtra("EventURL", hashMap.get(TorontourismActivity.EventURl));
                 intent.putExtra("MapURL", hashMap.get(TorontourismActivity.MapURl));
                 intent.putExtra("Image", hashMap.get(TorontourismActivity.Image));
+                intent.putExtra("Admission", hashMap.get(TorontourismActivity.Admission));
 
                 context.startActivity(intent);
             }
