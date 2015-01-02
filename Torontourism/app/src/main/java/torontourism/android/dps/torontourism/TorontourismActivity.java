@@ -37,6 +37,9 @@ public class TorontourismActivity extends Activity{
     static String EventURl = "EventURL-text";
     static String MapURl = "MapAddress-text";
     static String Admission = "Admission-text";
+    static String StartDate = "DateBeginShow-text";
+    static String EndDate = "DateEndShow-text";
+    static String LongDesc = "LongDesc-text";
 
 
     @Override
@@ -84,6 +87,9 @@ public class TorontourismActivity extends Activity{
                     map.put(EventURl, parser.getValue(element, "EventURL"));
                     map.put(MapURl, parser.getValue(element,"MapAddress"));
                     map.put(Admission,parser.getValue(element,"Admission"));
+                    map.put(StartDate,parser.getValue(element,"DateBeginShow"));
+                    map.put(EndDate,parser.getValue(element,"DateEndShow"));
+                    map.put(LongDesc,parser.getValue(element,"LongDesc"));
                     map.put(Image, parser.getValue(element, "Image"));
 
                     arrayList.add(map);

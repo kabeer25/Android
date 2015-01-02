@@ -97,6 +97,8 @@ public class ListViewAdapter extends BaseAdapter {
                 intent.putExtra("MapURL", hashMap.get(TorontourismActivity.MapURl));
                 intent.putExtra("Image", hashMap.get(TorontourismActivity.Image));
                 intent.putExtra("Admission", hashMap.get(TorontourismActivity.Admission));
+                intent.putExtra("StartDate", hashMap.get(TorontourismActivity.StartDate));
+                intent.putExtra("EndDate", hashMap.get(TorontourismActivity.EndDate));
 
                 context.startActivity(intent);
             }

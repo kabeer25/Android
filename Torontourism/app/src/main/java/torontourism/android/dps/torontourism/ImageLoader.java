@@ -1,7 +1,10 @@
 package torontourism.android.dps.torontourism;
 
 /**
- * Created by Kabeer on 12/24/2014.
+ *
+ * Code from :http://www.androidhive.info/2012/02/android-custom-listview-with-image-and-text/
+ * Modified by Kabeer on 12/24/2014.
+ *
  */
     import android.content.Context;
     import android.graphics.Bitmap;

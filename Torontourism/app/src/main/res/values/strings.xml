@@ -9,9 +9,12 @@
     <string name="categorylabel">"Category : "</string>
     <string name="locationlabel">"Location : "</string>
     <string name="admissionlabel">"Admission Price Range:</string>
-    <string name="phonelabel">"Contact Number :"</string>
-    <string name="eventURLlabel">"Event URL :"</string>
-    <string name="mapURLlabel">"Map URL :"</string>
+    <string name="phonelabel">"Contact Number : "</string>
+    <string name="eventURLlabel">"Event URL : "</string>
+    <string name="mapURLlabel">"Map URL : "</string>
+    <string name="startdatelabel">"Start Date : "</string>
+    <string name="enddatelabel">"End Date : "</string>
+    <string name="desclabel">"Description : "</string>
     <string name="image">Image</string>
 
 

@@ -4,7 +4,10 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 /**
- * Created by Kabeer on 12/24/2014.
+ *
+ * Code from :http://www.androidhive.info/2012/02/android-custom-listview-with-image-and-text/
+ * Modified by Kabeer on 12/24/2014.
+ *
  */
 public class Utils {
     public static void CopyStream(InputStream inputStream, OutputStream outputStream)

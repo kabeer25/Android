@@ -27,6 +27,8 @@ public class SingleItemView extends Activity {
     String EventURL;
     String MapURL;
     String Admission;
+    String EndDate;
+    String StartDate;
     ImageLoader imageLoader = new ImageLoader(this);
 
     @Override
@@ -46,6 +48,8 @@ public class SingleItemView extends Activity {
         MapURL = intent.getStringExtra("MapURL");
         Image = intent.getStringExtra("Image");
         Admission = intent.getStringExtra("Admission");
+        EndDate = intent.getStringExtra("EndDate");
+        StartDate = intent.getStringExtra("StartDate");
 
         MapURL = MapURL.replace("[","");
         MapURL = MapURL.replace("]","");
@@ -57,6 +61,8 @@ public class SingleItemView extends Activity {
         TextView textView1 = (TextView) findViewById(R.id.EventURL);
         TextView textView4 = (TextView) findViewById(R.id.MapURL);
         TextView textView6 = (TextView) findViewById(R.id.Admission);
+        TextView textView7 = (TextView) findViewById(R.id.EndDate);
+        TextView textView8 = (TextView) findViewById(R.id.StartDate);
         Button button = (Button) findViewById(R.id.button);
 
         ImageView imageView = (ImageView) findViewById(R.id.Image);
@@ -69,6 +75,8 @@ public class SingleItemView extends Activity {
         textView4.setText(Html.fromHtml(MapURL));
         textView4.setMovementMethod(LinkMovementMethod.getInstance());
         textView6.setText(Admission);
+        textView7.setText(EndDate);
+        textView8.setText(StartDate);
 
         textView1.setOnClickListener(new View.OnClickListener() {
             @Override

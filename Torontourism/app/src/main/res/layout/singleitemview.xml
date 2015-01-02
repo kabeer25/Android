@@ -37,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:layout_below="@+id/categorylabel"
+        android:layout_below="@+id/Category"
         android:text="@string/locationlabel"/>
     <TextView
         android:id="@id/Location"
@@ -52,7 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/admissionlabel"
-        android:layout_below="@+id/locationlabel"
+        android:layout_below="@+id/Location"
         android:textStyle="bold"/>
     <TextView
         android:id="@+id/Admission"
@@ -64,11 +64,43 @@
         android:layout_toRightOf="@id/admissionlabel"/>
 
     <TextView
+        android:id="@+id/startdatelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/startdatelabel"
+        android:layout_below="@+id/Admission"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/StartDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/startdatelabel"
+        android:layout_below="@+id/Admission"
+        android:layout_toEndOf="@+id/startdatelabel"
+        android:layout_toRightOf="@+id/startdatelabel"/>
+
+    <TextView
+        android:id="@+id/enddatelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enddatelabel"
+        android:layout_below="@+id/StartDate"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/EndDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enddatelabel"
+        android:layout_below="@+id/StartDate"
+        android:layout_toRightOf="@+id/enddatelabel"
+        android:layout_toEndOf="@+id/enddatelabel"/>
+
+    <TextView
         android:id="@+id/phonelabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:layout_below="@+id/Admission"
+        android:layout_below="@+id/EndDate"
         android:text="@string/phonelabel"/>
     <TextView
         android:id="@+id/Phone"
@@ -78,21 +110,21 @@
         android:autoLink="phone"
         android:text="@string/phonelabel"
         android:layout_toEndOf="@+id/phonelabel"
-        android:layout_below="@+id/Admission"
+        android:layout_below="@+id/EndDate"
         android:layout_toRightOf="@+id/phonelabel"/>
+
 
     <TextView
         android:id="@+id/eventURLlabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:layout_below="@+id/phonelabel"
+        android:layout_below="@+id/Phone"
         android:text="@string/eventURLlabel"/>
     <TextView
         android:id="@+id/EventURL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textStyle="italic"
         android:autoLink="web"
         android:text="@string/eventURLlabel"
         android:layout_toEndOf="@+id/eventURLlabel"
@@ -133,5 +165,7 @@
         android:text="Add to Calender"
         android:id="@+id/button"
         android:layout_below="@+id/Image"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:textStyle="bold" />
 </RelativeLayout>
