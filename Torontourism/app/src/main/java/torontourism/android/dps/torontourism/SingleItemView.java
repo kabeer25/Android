@@ -11,6 +11,8 @@ import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 /**
  * Created by Kabeer on 12/24/2014.
  */
@@ -21,6 +23,7 @@ public class SingleItemView extends Activity {
     String Image;
     String Phone;
     String EventURL;
+    String MapURL;
     ImageLoader imageLoader = new ImageLoader(this);
 
     @Override
@@ -37,13 +40,18 @@ public class SingleItemView extends Activity {
         Location = intent.getStringExtra("Location");
         Phone = intent.getStringExtra("Phone");
         EventURL = intent.getStringExtra("EventURL");
+        MapURL = intent.getStringExtra("MapURL");
         Image = intent.getStringExtra("Image");
+
+        MapURL = MapURL.replace("[","");
+        MapURL = MapURL.replace("]","");
 
         TextView textView = (TextView) findViewById(R.id.Event);
         TextView textView3 = (TextView) findViewById(R.id.Category);
         TextView textView2 = (TextView) findViewById(R.id.Location);
         TextView textView5 = (TextView) findViewById(R.id.Phone);
         TextView textView1 = (TextView) findViewById(R.id.EventURL);
+        TextView textView4 = (TextView) findViewById(R.id.MapURL);
 
         ImageView imageView = (ImageView) findViewById(R.id.Image);
 
@@ -52,6 +60,8 @@ public class SingleItemView extends Activity {
         textView2.setText(Location);
         textView5.setText(Phone);
         textView1.setText(EventURL);
+        textView4.setText(Html.fromHtml(MapURL));
+        textView4.setMovementMethod(LinkMovementMethod.getInstance());
 
         textView1.setOnClickListener(new View.OnClickListener() {
             @Override

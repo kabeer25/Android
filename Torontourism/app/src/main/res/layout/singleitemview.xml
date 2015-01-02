@@ -84,6 +84,23 @@
         android:layout_below="@+id/Phone"
         android:layout_toRightOf="@+id/eventURLlabel"/>
 
+    <TextView
+        android:id="@+id/mapURLlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_below="@+id/EventURL"
+        android:text="@string/mapURLlabel"/>
+
+    <TextView
+        android:id="@+id/MapURL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mapURLlabel"
+        android:layout_toEndOf="@+id/mapURLlabel"
+        android:layout_below="@+id/EventURL"
+        android:layout_toRightOf="@+id/mapURLlabel"/>
+
     <ImageView
         android:id="@+id/Image"
         android:layout_width="wrap_content"
@@ -93,5 +110,5 @@
         android:contentDescription="@string/image"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/EventURL" />
+        android:layout_below="@+id/MapURL" />
 </RelativeLayout>

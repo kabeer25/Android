@@ -59,6 +59,7 @@ public class ListViewAdapter extends BaseAdapter {
         TextView Location;
         TextView Phone;
         TextView EventURL;
+        TextView MapURL;
         ImageView Image;
 
         layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -72,6 +73,7 @@ public class ListViewAdapter extends BaseAdapter {
         Location = (TextView) view.findViewById(R.id.Location);
         Phone = (TextView) view.findViewById(R.id.Phone);
         EventURL = (TextView) view.findViewById(R.id.EventURL);
+        MapURL = (TextView) view.findViewById(R.id.MapURL);
 
         Image = (ImageView) view.findViewById(R.id.Image);
 
@@ -97,6 +99,7 @@ public class ListViewAdapter extends BaseAdapter {
                 intent.putExtra("Location", hashMap.get(TorontourismActivity.Location));
                 intent.putExtra("Phone", hashMap.get(TorontourismActivity.Phone));
                 intent.putExtra("EventURL", hashMap.get(TorontourismActivity.EventURl));
+                intent.putExtra("MapURL", hashMap.get(TorontourismActivity.MapURl));
                 intent.putExtra("Image", hashMap.get(TorontourismActivity.Image));
 
                 context.startActivity(intent);

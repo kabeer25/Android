@@ -35,6 +35,7 @@ public class TorontourismActivity extends Activity{
     static String Location = "Location-text";
     static String Phone = "Phone-text";
     static String EventURl = "EventURL-text";
+    static String MapURl = "MapAddress-text";
 
 
     @Override
@@ -80,6 +81,7 @@ public class TorontourismActivity extends Activity{
                     map.put(Location,parser.getValue(element,"Location"));
                     map.put(Phone,parser.getValue(element,"OrgContactPhone"));
                     map.put(EventURl, parser.getValue(element, "EventURL"));
+                    map.put(MapURl, parser.getValue(element,"MapAddress"));
                     map.put(Image, parser.getValue(element, "Image"));
 
                     arrayList.add(map);

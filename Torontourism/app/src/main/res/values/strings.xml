@@ -7,10 +7,11 @@
     <string name="eventlabel">"Event : "</string>
     <string name="arealabel">"Area : "</string>
     <string name="categorylabel">"Category : "</string>
-    <string name="locationlabel">"Location: "</string>
+    <string name="locationlabel">"Location : "</string>
     <string name="admissionlabel">"Admission Price Range:</string>
     <string name="phonelabel">"Contact Number :"</string>
-    <string name="eventURLlabel">"Event URL:"</string>
+    <string name="eventURLlabel">"Event URL :"</string>
+    <string name="mapURLlabel">"Map URL :"</string>
     <string name="image">Image</string>
 
 
