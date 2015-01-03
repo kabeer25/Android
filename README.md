@@ -19,3 +19,5 @@ TO RUN THIS APPLICATION
 IMPORTANT running the application NOTE:
 
 This application will only run on a real Android Device. This application will fail on Android Virtual Device. 
+API Level should be min: 16 or higher for the phone. 
+if the application crashes when opening. Close the application fully and re-run the application. It should run.
